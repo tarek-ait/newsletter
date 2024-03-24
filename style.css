@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto' ;
+}
+
+
+/* colors 
+
+- Dark Slate Grey: hsl(234, 29%, 20%)
+- Charcoal Grey: hsl(235, 18%, 26%)
+- Grey: hsl(231, 7%, 60%)
+- White: hsl(0, 0%, 100%)
+*/
+
+body{
+    background-color:  hsl(235, 18%, 26%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: hsl(235, 18%, 26%);
+}
+
+.right{
+    width: 50%;
+}
+
+
+.left .text,
+.rght .text{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left p,
+.right p{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+::placeholder{
+    font-weight: 500;
+    font-size: 15px;
+    opacity: 60%;
+}
+
+.button:hover{
+    color: white;
+    background-color: linear-gradient(hsl(4, 100%, 67%),yellow);
+
+}
+
+.success{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.right{
+    order: 1;
+}
+
+.left{
+    order: 2;
+    
+}
+
+.container{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
+@media (max-width: 991.98px) {
+    body {
+        height: 100vh;
+        background-color: white;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0; /* Remove default margin */
+    }
+
+    .mainpage .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4rem; /* Add some gap between items */
+        box-shadow: none;
+        height: 100%;
+        width: 100%;
+        padding: 1rem; /* Add padding */
+    }
+
+    .mainpage .container .left .image svg {
+        display: none;
+    }
+
+    .right {
+        order: 2;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%; /* Ensure the element takes full width */
+    }
+
+    .right .text {
+        padding: 0;
+        width: 100%;
+        max-width: 100vw; /* Set max width to half of the screen */
+    }
+
+    .right .text .features {
+        padding: 0;
+        width: 100%;
+    }
+
+    .left {
+        order: 1;
+        width: 100%; /* Ensure the element takes full width */
+        background-image: url(assets/images/illustration-sign-up-mobile.svg);
+        background-size: cover;
+        width: 100vw;
+        height: 350px;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    .left .image svg {
+        width: 100px;
+    }
+
+    /* Set the form to be at its maximum width */
+    form input,
+    button {
+        width: 100%;
+        max-width: 100vw; /* Set max width to half of the screen */
+    }
+    #touch{
+        display: none;
+    }
+}
+
+
